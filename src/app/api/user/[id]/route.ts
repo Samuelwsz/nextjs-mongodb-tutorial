@@ -1,11 +1,10 @@
 import { connectToDb } from "@/lib/db"
 import { User } from "@/models/User"
 import { HttpStatusCode } from "axios"
-import { NextApiRequest } from "next"
 import { NextRequest, NextResponse } from "next/server"
 
 export async function DELETE(
-  req: NextApiRequest,
+  req: NextRequest,
   { params }: { params: { id: string } }
 ) {
   try {
